@@ -1,4 +1,6 @@
 import './App.css';
+import Hero from './components/Home/Hero';
+import MyFooter from './components/layout/Footer';
 import MyNav from './components/layout/navbar';
 
 function App() {
@@ -7,16 +9,14 @@ function App() {
       <header>
         {/* we are going to add some content here later */}
       </header>
-
+      
       <MyNav />
-
+      <Hero />
       <main>
         {/* we are going to add some content here later */}
       </main>
 
-      <footer>
-        {/* we are going to add some content here later */}
-      </footer>
+      <MyFooter />
     </div>
   );
 }
