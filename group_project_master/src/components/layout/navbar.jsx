@@ -1,44 +1,61 @@
-import { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
+import { LinkContainer } from 'react-router-bootstrap';
 import logo from '../../assets/logo.png';
 import './navbar.css';
 
-export default class MyNav extends Component {
-    render() {
-        return (
-            <Navbar expand="lg" sticky="top" className="navbar-whole">
+export default function MyNavBar() {
+  return (
+    <Navbar expand="lg" sticky="top" className="navbar-whole">
+      <LinkContainer to="/">
+        <Navbar.Brand className="brand-parent">
+          <img src={logo}  className="brand-logo" />
+          <div className="words">
+            <h1 className="words-top">BLACK STEEL</h1>
+            <h1 className="words-bottom">MARKET</h1>
+          </div>
+        </Navbar.Brand>
+      </LinkContainer>
 
-                <Navbar.Brand href="/" className="brand-parent">
-                    <img src={logo} className="brand-logo" />
-                    <div className="words">
-                        <span className="words-top">BLACK STEEL</span>
-                        <span className="words-bottom">MARKET</span>
-                    </div>
-                </Navbar.Brand>
+      <Navbar.Toggle aria-controls="main-nav" />
 
-                <Navbar.Toggle aria-controls="main-nav" />
+      <Navbar.Collapse id="main-nav">
+        <div></div>
 
-                <Navbar.Collapse id="main-nav">
-                    <div></div>
-                        <Nav className="center-nav">
-                            <Nav.Link href="/">Home</Nav.Link>
-                            <Nav.Link href="/shop">Shop</Nav.Link>
+        <Nav className="center-nav">
+          <LinkContainer to="/">
+            <Nav.Link>Home</Nav.Link>
+          </LinkContainer>
 
-                            <NavDropdown title="Collections" id="collections-dropdown">
-                                <NavDropdown.Item href="/armor">Armor</NavDropdown.Item>
-                                <NavDropdown.Item href="/shields">Shields</NavDropdown.Item>
-                                <NavDropdown.Item href="/arms">Arms</NavDropdown.Item>
-                            </NavDropdown>
-                        </Nav>
+          <LinkContainer to="/shop">
+            <Nav.Link>Shop</Nav.Link>
+          </LinkContainer>
 
-                        <Nav className="right-side-nav">
-                            <Nav.Link href="/search">Search</Nav.Link>
-                            <Nav.Link href="/cart">Cart</Nav.Link>
-                        </Nav>
-                    
-                </Navbar.Collapse>
-            </Navbar>
-        );
-    }
+          <NavDropdown title="Collections" id="collections-dropdown">
+            <LinkContainer to="/armor">
+              <NavDropdown.Item>Armor</NavDropdown.Item>
+            </LinkContainer>
+
+            <LinkContainer to="/shields">
+              <NavDropdown.Item>Shields</NavDropdown.Item>
+            </LinkContainer>
+
+            <LinkContainer to="/arms">
+              <NavDropdown.Item>Arms</NavDropdown.Item>
+            </LinkContainer>
+          </NavDropdown>
+        </Nav>
+
+        <Nav className="right-side-nav">
+          <LinkContainer to="/search">
+            <Nav.Link>Search</Nav.Link>
+          </LinkContainer>
+
+          <LinkContainer to="/cart">
+            <Nav.Link>Cart</Nav.Link>
+          </LinkContainer>
+        </Nav>
+      </Navbar.Collapse>
+    </Navbar>
+  );
 }
