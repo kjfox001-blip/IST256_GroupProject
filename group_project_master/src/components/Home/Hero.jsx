@@ -1,8 +1,11 @@
+import './Hero.css';
+
 function Hero() {
   return (
     <section className="hero text-center py-5">
       <h1>Welcome to Black Steel Market</h1>
-      <p>Gear for legends. Shop the best in armor, weapons, and accessories.</p>
+      <br />
+      <p>ARMOR, WEAPONS, AND ACCESSORIES</p>
       
     </section>
   );

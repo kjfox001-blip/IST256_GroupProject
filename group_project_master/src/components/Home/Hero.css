@@ -1,0 +1,31 @@
+.hero {
+    background-image: url('../../assets/hero3.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    min-height: 60vh;
+}
+
+.hero h1 {
+    font-size: 90px;
+    font-weight: lighter;
+    
+    
+
+}
+
+.hero p {
+    
+    font-size: 27px;
+
+}
+
+.hero {
+    font-family: Roboto, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center center;
+    color: rgb(255, 255, 255);
+
+}
