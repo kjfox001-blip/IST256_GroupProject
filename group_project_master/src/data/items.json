@@ -1,0 +1,149 @@
+[
+  {
+    "id": 1,
+    "name": "Long Sword",
+    "price": 1300,
+    "category": "Arms",
+    "image": "https://www.metmuseum.org/art/collection/search/27515"
+  },
+  {
+    "id": 2,
+    "name": "Short Sword",
+    "price": 900,
+    "category": "Arms",
+    "image": "https://www.metmuseum.org/art/collection/search/23367"
+  },
+  {
+    "id": 3,
+    "name": "Mace",
+    "price": 900,
+    "category": "Arms",
+    "image": "https://www.metmuseum.org/art/collection/search/29020"
+  },
+  {
+    "id": 4,
+    "name": "Pole-arm",
+    "price": 2000,
+    "category": "Arms",
+    "image": "https://www.metmuseum.org/art/collection/search/22195"
+  },
+  {
+    "id": 5,
+    "name": "Shield",
+    "price": 500,
+    "category": "Arms",
+    "image": "https://www.metmuseum.org/art/collection/search/24902"
+  },
+  {
+    "id": 6,
+    "name": "Longbow",
+    "price": 600,
+    "category": "Arms",
+    "image": "https://www.google.com/imgres?q=ash%20bow%20medevil&imgurl=https%3A%2F%2Fwww.3riversarchery.com%2Fmm5%2Fgraphics%2F00000001%2F18%2F85920X.jpg&imgrefurl=https%3A%2F%2Fwww.3riversarchery.com%2Fold-english-longbow.html%3Fsrsltid%3DAfmBOorju2fB_-R7uf-FU7XDDXsbFo1aPUO6ba3EipcTVdTFTruLeRJy&docid=aqw5CE_jfNlhnM&tbnid=Mw77hxq87l09aM&vet=12ahUKEwiHufDbi-yTAxVGGlkFHWFvLMsQnPAOegQIMBAA..i&w=634&h=1670&hcb=2&ved=2ahUKEwiHufDbi-yTAxVGGlkFHWFvLMsQnPAOegQIMBAA"
+  },
+  {
+    "id": 7,
+    "name": "Standard Crossbow",
+    "price": 600,
+    "category": "Arms",
+    "image": "https://www.metmuseum.org/art/collection/search/21940"
+  },
+  {
+    "id": 8,
+    "name": "Cast Arrows and Bolts",
+    "price": 0.1,
+    "category": "Arms",
+    "image": ""
+  },
+  {
+    "id": 9,
+    "name": "Hammer Finished Arrows and Bolts",
+    "price": 0.5,
+    "category": "Arms",
+    "image": "https://www.metmuseum.org/art/collection/search/32361"
+  },
+  {
+    "id": 10,
+    "name": "Long Chain Hauberk",
+    "price": 350,
+    "category": "Armour",
+    "image": "https://www.metmuseum.org/art/collection/search/34324"
+  },
+  {
+    "id": 11,
+    "name": "Short Chain Hauberk",
+    "price": 275,
+    "category": "Armour",
+    "image": "https://www.metmuseum.org/art/collection/search/22415"
+  },
+  {
+    "id": 12,
+    "name": "Brigantine",
+    "price": 2000,
+    "category": "Armour",
+    "image": ""
+  },
+  {
+    "id": 13,
+    "name": "Standard Great helm",
+    "price": 700,
+    "category": "Armour",
+    "image": ""
+  },
+  {
+    "id": 14,
+    "name": "Padded Pants",
+    "price": 100,
+    "category": "Armour",
+    "image": ""
+  },
+  {
+    "id": 15,
+    "name": "Wool Gambeson",
+    "price": 300,
+    "category": "Armour",
+    "image": ""
+  },
+  {
+    "id": 16,
+    "name": "Steel Curiass",
+    "price": 3500,
+    "category": "Armour",
+    "image": "https://www.metmuseum.org/art/collection/search/22359"
+  },
+  {
+    "id": 17,
+    "name": "Chain mail Mittens",
+    "price": 200,
+    "category": "Armour",
+    "image": ""
+  },
+  {
+    "id": 18,
+    "name": "Frog mouth Helm",
+    "price": 1200,
+    "category": "Armour",
+    "image": "https://www.metmuseum.org/art/collection/search/23216"
+  },
+  {
+    "id": 19,
+    "name": "Hourglass Gauntlets",
+    "price": 600,
+    "category": "Armour",
+    "image": "https://www.metmuseum.org/art/collection/search/22347"
+  },
+  {
+    "id": 20,
+    "name": "Plate Sleeves with Couters & pauldrens",
+    "price": 1175,
+    "category": "Armour",
+    "image": ""
+  },
+  {
+    "id": 21,
+    "name": "Plate Greaves",
+    "price": 300,
+    "category": "Armour",
+    "image": "https://www.metmuseum.org/art/collection/search/22970"
+  }
+]
