@@ -1,18 +1,27 @@
 import { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
-import { Navbar, Container, Nav, NavDropdown } from 'react-bootstrap';
+import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
+import logo from '../../assets/logo.png';
+import './navbar.css';
 
 export default class MyNav extends Component {
     render() {
         return (
-            <Navbar bg="light" expand="lg" sticky="top" variant="light">
-                <Container fluid>
-                    <Navbar.Brand href="/">STM</Navbar.Brand>
+            <Navbar expand="lg" sticky="top" className="navbar-whole">
 
-                    <Navbar.Toggle aria-controls="main-nav" />
+                <Navbar.Brand href="/" className="brand-parent">
+                    <img src={logo} className="brand-logo" />
+                    <div className="words">
+                        <span className="words-top">BLACK STEEL</span>
+                        <span className="words-bottom">MARKET</span>
+                    </div>
+                </Navbar.Brand>
 
-                    <Navbar.Collapse id="main-nav">
-                        <Nav className="me-auto">
+                <Navbar.Toggle aria-controls="main-nav" />
+
+                <Navbar.Collapse id="main-nav">
+                    <div></div>
+                        <Nav className="center-nav">
                             <Nav.Link href="/">Home</Nav.Link>
                             <Nav.Link href="/shop">Shop</Nav.Link>
 
@@ -23,12 +32,12 @@ export default class MyNav extends Component {
                             </NavDropdown>
                         </Nav>
 
-                        <Nav>
+                        <Nav className="right-side-nav">
                             <Nav.Link href="/search">Search</Nav.Link>
                             <Nav.Link href="/cart">Cart</Nav.Link>
                         </Nav>
-                    </Navbar.Collapse>
-                </Container>
+                    
+                </Navbar.Collapse>
             </Navbar>
         );
     }
