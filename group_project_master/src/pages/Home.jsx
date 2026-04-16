@@ -9,13 +9,13 @@ function Home() {
         {/* we are going to add some content here later */}
       </header>
       
-      <MyNav />
+      
       <Hero />
       <main>
         {/* we are going to add some content here later */}
       </main>
 
-      <MyFooter />
+      
     </div>
   );
 }

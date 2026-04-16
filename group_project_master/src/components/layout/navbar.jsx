@@ -4,7 +4,7 @@ import { LinkContainer } from 'react-router-bootstrap';
 import logo from '../../assets/logo.png';
 import './navbar.css';
 
-export default function MyNavBar() {
+export default function MyNav() {
   return (
     <Navbar expand="lg" sticky="top" className="navbar-whole">
       <LinkContainer to="/">

@@ -9,13 +9,13 @@ function Shop() {
         {/* we are going to add some content here later */}
       </header>
       
-      <MyNav />
+      
      
       <main>
         {/* we are going to add some content here later */}
       </main>
 
-      <MyFooter />
+      
     </div>
   );
 }
