@@ -1,4 +1,5 @@
-[
+{
+"items" : [
   {
     "id": 1,
     "name": "Long Sword",
@@ -52,14 +53,14 @@
     "id": 8,
     "name": "Cast Arrows and Bolts",
     "price": 0.1,
-    "category": "Arms",
-    "image": ""
+    "category": "Munitions",
+    "image": "https://www.medievalcollectibles.com/wp-content/uploads/2019/03/AH-3522-25_2.jpg"
   },
   {
     "id": 9,
     "name": "Hammer Finished Arrows and Bolts",
     "price": 0.5,
-    "category": "Arms",
+    "category": "Munitions",
     "image": "https://www.metmuseum.org/art/collection/search/32361"
   },
   {
@@ -67,42 +68,42 @@
     "name": "Long Chain Hauberk",
     "price": 350,
     "category": "Armour",
-    "image": "https://www.metmuseum.org/art/collection/search/34324"
+    "image": "https://collectionapi.metmuseum.org/api/collection/v1/iiif/34324/1382322/main-image"
   },
   {
     "id": 11,
     "name": "Short Chain Hauberk",
     "price": 275,
     "category": "Armour",
-    "image": "https://www.metmuseum.org/art/collection/search/22415"
+    "image": "https://collectionapi.metmuseum.org/api/collection/v1/iiif/22415/60221/main-image"
   },
   {
     "id": 12,
-    "name": "Brigantine",
+    "name": "Brigandine",
     "price": 2000,
     "category": "Armour",
-    "image": ""
+    "image": "https://collectionapi.metmuseum.org/api/collection/v1/iiif/23080/1748990/main-image"
   },
   {
     "id": 13,
     "name": "Standard Great helm",
     "price": 700,
     "category": "Armour",
-    "image": ""
+    "image": "https://collections.armouries.net/media/aetopia/70/763/mid_DI_2011_0247.jpg"
   },
   {
     "id": 14,
     "name": "Padded Pants",
     "price": 100,
     "category": "Armour",
-    "image": ""
+    "image": "https://i.pinimg.com/736x/3c/cb/f0/3ccbf0c42fb3bf47cd427329217cd871.jpg"
   },
   {
     "id": 15,
     "name": "Wool Gambeson",
     "price": 300,
     "category": "Armour",
-    "image": ""
+    "image": "https://calimacil.com/cdn/shop/files/arthur-gambeson-long-vest-mytholon-brown-3.jpg?v=1712669341&width=1090"
   },
   {
     "id": 16,
@@ -116,7 +117,7 @@
     "name": "Chain mail Mittens",
     "price": 200,
     "category": "Armour",
-    "image": ""
+    "image": "https://i.ebayimg.com/images/g/XIsAAOSwBmVgwP6F/s-l1200.jpg"
   },
   {
     "id": 18,
@@ -137,7 +138,7 @@
     "name": "Plate Sleeves with Couters & pauldrens",
     "price": 1175,
     "category": "Armour",
-    "image": ""
+    "image": "https://wargearshop.com/wp-content/uploads/2019/05/armaturacomposita39-jpg-19.jpg"
   },
   {
     "id": 21,
@@ -147,3 +148,4 @@
     "image": "https://www.metmuseum.org/art/collection/search/22970"
   }
 ]
+}

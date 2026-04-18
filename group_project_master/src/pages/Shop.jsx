@@ -1,6 +1,7 @@
 
 import MyFooter from '../components/layout/Footer';
 import MyNav from '../components/layout/navbar';
+import ItemCards from '../components/layout/ItemCards.jsx';
 
 function Shop() {
   return (
@@ -9,10 +10,9 @@ function Shop() {
         {/* we are going to add some content here later */}
       </header>
       
-      
-     
       <main>
         {/* we are going to add some content here later */}
+        <ItemCards />
       </main>
 
       
