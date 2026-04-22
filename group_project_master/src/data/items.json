@@ -68,21 +68,21 @@
     "name": "Long Chain Hauberk",
     "price": 350,
     "category": "Armour",
-    "image": "https://collectionapi.metmuseum.org/api/collection/v1/iiif/34324/1382322/main-image"
+    "image": "https://images.metmuseum.org/CRDImages/aa/original/DP334282.jpg"
   },
   {
     "id": 11,
-    "name": "Short Chain Hauberk",
+    "name": "Short Chain shirt",
     "price": 275,
     "category": "Armour",
-    "image": "https://collectionapi.metmuseum.org/api/collection/v1/iiif/22415/60221/main-image"
+    "image": "https://images.metmuseum.org/CRDImages/aa/original/DP-15586-001.jpg"
   },
   {
     "id": 12,
     "name": "Brigandine",
     "price": 2000,
     "category": "Armour",
-    "image": "https://collectionapi.metmuseum.org/api/collection/v1/iiif/23080/1748990/main-image"
+    "image": "https://images.metmuseum.org/CRDImages/aa/original/LC-29_150_91a-004.jpg"
   },
   {
     "id": 13,
