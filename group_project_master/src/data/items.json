@@ -40,7 +40,7 @@
     "name": "Longbow",
     "price": 600,
     "category": "Arms",
-    "image": "https://www.google.com/imgres?q=ash%20bow%20medevil&imgurl=https%3A%2F%2Fwww.3riversarchery.com%2Fmm5%2Fgraphics%2F00000001%2F18%2F85920X.jpg"
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Englishlongbow.jpg/500px-Englishlongbow.jpg"
   },
   {
     "id": 7,
@@ -61,7 +61,7 @@
     "name": "Hammer Finished Arrows and Bolts",
     "price": 0.5,
     "category": "Munitions",
-    "image": "https://www.metmuseum.org/art/collection/search/32361"
+    "image": "https://exarc.net/sites/default/files/main_218.jpg"
   },
   {
     "id": 10,
@@ -103,7 +103,7 @@
     "name": "Wool Gambeson",
     "price": 300,
     "category": "Armour",
-    "image": "https://calimacil.com/cdn/shop/files/arthur-gambeson-long-vest-mytholon-brown-3.jpg?v=1712669341&width=1090"
+    "image": "https://m.armstreet.com/catalogue/small-mobile/pourpoint-gambeson-knight-of-fortune-4.jpg"
   },
   {
     "id": 16,
