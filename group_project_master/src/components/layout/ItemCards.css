@@ -20,14 +20,14 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 .item-card_img{
-    width: 120%;
+    width: 200px;
     height: 160px;
     object-fit: cover;
     object-position: center;
     display: block;
 }
 .item-card-img_container{
-    width: 120%;
+    width: 200px;
     height: 160px;
     overflow: hidden;
     flex-shrink: 0;
