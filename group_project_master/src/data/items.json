@@ -23,7 +23,7 @@
   },
   {
     "id": 4,
-    "name": "Pole-arm",
+    "name": "Halberd",
     "price": 2000,
     "category": "Arms",
     "image": "https://images.metmuseum.org/CRDImages/aa/original/14.25.300_001june2014.jpg"
@@ -146,6 +146,69 @@
     "price": 300,
     "category": "Armour",
     "image": "https://images.metmuseum.org/CRDImages/aa/original/DP-13125-030.jpg"
+  },
+  {
+    "id": 22,
+    "name": "Full Plate Armour",
+    "price": 15000,
+    "category": "Armour",
+    "image": "https://images.metmuseum.org/CRDImages/aa/original/158414.jpg"
+  },
+  {
+    "id": 23,
+    "name": "Pavise Shield",
+    "price": 700,
+    "category": "Arms",
+    "image": "https://images.metmuseum.org/CRDImages/aa/original/DP111254.jpg"
+  },
+  {
+    "id": 24,
+    "name": "Buckler Shield",
+    "price": 300,
+    "category": "Arms",
+    "image": "https://images.metmuseum.org/CRDImages/aa/original/LC-45_160_1-001.jpg"
+  },
+  {
+    "id": 25,
+    "name": "Estoc",
+    "price": 1200,
+    "category": "Arms",
+    "image": "https://images.metmuseum.org/CRDImages/aa/original/LC-14_25_1049-004.jpg"
+  },
+  {
+    "id": 26,
+    "name": "Billhook",
+    "price": 1000,
+    "category": "Arms",
+    "image": "https://images.metmuseum.org/CRDImages/aa/original/14.25.159_001feb2015.jpg"
+  },
+  {
+    "id": 27,
+    "name": "Berdiche",
+    "price": 1500,
+    "category": "Arms",
+    "image": "https://images.metmuseum.org/CRDImages/aa/original/26.43.2_001feb2015.jpg"
+  },
+  {
+    "id": 28,
+    "name": "War Hammer",
+    "price": 1000,
+    "category": "Arms",
+    "image": "https://images.metmuseum.org/CRDImages/aa/original/LC-14_25_1342-004.jpg"
+  },
+  {
+    "id": 29,
+    "name": "Great Sword",
+    "price": 1600,
+    "category": "Arms",
+    "image": "https://images.metmuseum.org/CRDImages/aa/original/SC-LC-175316.jpg"
+  },
+  {
+    "id": 30,
+    "name": "Tourney / Cavalry Shield",
+    "price": 200,
+    "category": "Arms",
+    "image": "https://images.metmuseum.org/CRDImages/aa/original/DT240700.jpg"
   }
 ]
 }
