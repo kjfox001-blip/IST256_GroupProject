@@ -33,7 +33,9 @@ function ItemCards() {
                             <span className="item-card_category">{item.category}</span>
                         )}
                         <h4 className="item-card_name">{item.name}</h4>
-                    <p className="item-card_price">{formatPrice(item.price)}</p>
+                        <div className= "item-card_price-container">
+                            <p className="item-card_price">{formatPrice(item.price)}</p>
+                        </div>
                         <button type="button" class="btn btn-primary btn-lg">Add To Cart</button>
                     </div>
                 </div>
