@@ -20,18 +20,13 @@ function ItemCards() {
     const [qty, setQty] = useState({});
 
     function increaseQty(id){
-        return
         setQty((prev) => ({...prev, [id]: (prev[id] || 0) + 1}));
+        return setQty;
     }
 
     function decreaseQty(id){
         setQty ((prev) => {
             const currentQty = prev[id] || 0;
-            if (currentQty <= 1){
-                const updatedQty = {...prev};
-                delete updatedQty[id];
-                return updatedQty;
-            }
             return {...prev, [id]: currentQty - 1};
         });
     }

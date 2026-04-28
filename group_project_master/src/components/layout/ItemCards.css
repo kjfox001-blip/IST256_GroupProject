@@ -71,7 +71,7 @@
 }
 .item-card_counter{
     display: flex;
-    align-items: center;
+    align-self: center;
     border-color: black;
     border-width: 5px;
     gap: 8px;
