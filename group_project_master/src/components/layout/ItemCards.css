@@ -72,6 +72,8 @@
 .item-card_counter{
     display: flex;
     align-items: center;
+    border-color: black;
+    border-width: 5px;
     gap: 8px;
 }
 .item-card_counter-qty{

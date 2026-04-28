@@ -20,6 +20,7 @@ function ItemCards() {
     const [qty, setQty] = useState({});
 
     function increaseQty(id){
+        return
         setQty((prev) => ({...prev, [id]: (prev[id] || 0) + 1}));
     }
 
@@ -55,18 +56,17 @@ function ItemCards() {
                                 {item.category && (
                                     <span className="item-card_category">{item.category}</span>
                              )}
-                            <p className="item-card_price">{formatPrice(item.price)}</p>
+                                <p className="item-card_price">{formatPrice(item.price)}</p>
                             </div>
                             <h4 className="item-card_name">{item.name}</h4>
-                            {inCart ?(
                                 <div className = "item-card_counter">
-                                    <button type="button" class="btn btn-primary btn-sm" onclick={() => decreaseQty(item.id)}>Small button</button>
+                                    <button type="button" class="btn btn-primary btn-sm" onclick={() => decreaseQty(item.id)}>-</button>
                                     <span className="item-card_count">{count}</span>
-                                    <button type="button" class="btn btn-primary btn-sm" onclick={() => increaseQty(item.id)}>Small button</button>
+                                    <button type="button" class="btn btn-primary btn-sm" onclick={() => increaseQty(item.id)}>+</button>
                                 </div>
-                            ) : (
+                            
                                 <button type="button" class="btn btn-primary btn-lg">Add To Cart</button>
-                            )}
+                            
                         </div>
                     </div>
                 );
