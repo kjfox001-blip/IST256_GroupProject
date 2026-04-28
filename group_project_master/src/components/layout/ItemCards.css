@@ -15,6 +15,11 @@
     transition: border-color 0.15s, box shadow 0.15s;
     font-family: "roboto", sans-serif;    
 }
+.item-card_top-row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 .item-card:hover{
     border-color: #000000;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -36,7 +41,7 @@
 .item-card_body{
     display:flex;
     flex-direction: column;
-    padding: 12px 14px ,14px;
+    padding: 12px 14px 14px;
     gap: 8px;
     font-family: "roboto", sans-serif;    
 }
@@ -46,6 +51,7 @@
     color: #111827;
     border-radius: 20px;
     align-self: flex-start;
+    font-style: italic;
     font-family: "roboto", sans-serif;    
 }
 .item-card_name{
@@ -55,17 +61,24 @@
     margin: 0;
     font-family: "roboto", sans-serif;    
 }
-.item-card_price-container{
-    display: right;
-    justify-content: right;
-    align-items: center;
-}
 .item-card_price{
     font-size: 16px;
-    font-weight: 500;
-    text-decoration: bold;
+    font-weight: 700;
     text-align: right;
     color: #111827;
     margin: 0;
     font-family: "roboto", sans-serif;    
+}
+.item-card_counter{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.item-card_counter-qty{
+    flex: 1;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+    color: black;
+    font-family: "roboto", sans-serif;
 }
