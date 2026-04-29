@@ -70,17 +70,10 @@
     font-family: "roboto", sans-serif;    
 }
 .item-card_counter{
-    display: flex;
-    align-self: center;
-    border-color: black;
-    border-width: 5px;
-    gap: 8px;
-}
-.item-card_counter-qty{
     flex: 1;
     text-align: center;
     font-size: 16px;
-    font-weight: 600;
+    font-weight: 500;
     color: black;
     font-family: "roboto", sans-serif;
 }
