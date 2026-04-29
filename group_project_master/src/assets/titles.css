@@ -1,0 +1,13 @@
+.tite{
+    font-size: 60px;
+    font-weight: 800;
+    color: black;
+    text-align: center;
+    font-family: "roboto", sans-serif;
+}
+.description{
+    font-size: 18px;
+    color: black;
+    text-align: center;
+    font-family: "roboto", sans-serif;
+}
