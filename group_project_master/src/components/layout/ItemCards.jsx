@@ -1,10 +1,25 @@
 import itemsData from '../../data/items.json';
 import './ItemCards.css';
-import useState from 'react';
+import {useState} from 'react';
 
 const PLACEHOLDER = "https://img.freepik.com/free-vector/illustration-gallery-icon_53876-27002.jpg?semt=ais_hybrid&w=740&q=80";
 
 const item = Array.isArray(itemsData) ? itemsData : itemsData.items ?? [];
+/*
+const setQty = () = >{
+    const [qty, setQty] = useState("");
+    
+    const setQty = (e) =>{setQty(e.target.value)};
+
+    return(
+        <div>
+            <div>
+                <input/>
+            </div>
+        </div>
+    
+};
+*/
 
 function isDirectImageUrl(url) {
     return typeof url === 'string' && /\.(jpeg|jpg|gif|png|bmp|webp|svg)$/i.test(url);
@@ -38,7 +53,7 @@ function ItemCards() {
                                 <p className="item-card_price">{formatPrice(item.price)}</p>
                             </div>
                             <h4 className="item-card_name">{item.name}</h4>
-                            <input type="number" className="item-card_counter" text="Input #"/>
+                            <input type="text" className="item-card_counter" name="Qty input" />
                             <button type="button" class="btn btn-primary btn-lg">Add To Cart</button>
                         </div>
                     </div>
