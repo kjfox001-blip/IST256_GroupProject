@@ -5,21 +5,6 @@ import {useState} from 'react';
 const PLACEHOLDER = "https://img.freepik.com/free-vector/illustration-gallery-icon_53876-27002.jpg?semt=ais_hybrid&w=740&q=80";
 
 const item = Array.isArray(itemsData) ? itemsData : itemsData.items ?? [];
-/*
-const setQty = () = >{
-    const [qty, setQty] = useState("");
-    
-    const setQty = (e) =>{setQty(e.target.value)};
-
-    return(
-        <div>
-            <div>
-                <input/>
-            </div>
-        </div>
-    
-};
-*/
 
 function isDirectImageUrl(url) {
     return typeof url === 'string' && /\.(jpeg|jpg|gif|png|bmp|webp|svg)$/i.test(url);
