@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import '../assets/titles.css'
 
 function Cart(props) {
     const subtotal = props.cart.reduce((total, cartItem) => {
@@ -8,7 +9,7 @@ function Cart(props) {
     return (
         <div className="app-container">
             <main style={{ padding: '40px', fontFamily: 'Roboto, sans-serif'}}>
-            <h1>Your Cart</h1>
+            <h1 class = "title">Your Cart</h1>
             {props.cart.length === 0 ? (
                 <div style={{ textAlign: 'center', margintop: '60px'}}>
                     <p style={{ fontSize: '20px' }}>Your cart is empty</p>
@@ -19,11 +20,11 @@ function Cart(props) {
                     <table className="table table-bordered">
                         <thead className="table-dark">
                             <tr>
-                                <th>Item</th>
-                                <th>Price</th>
-                                <th>Quantity</th>
-                                <th>Total</th>
-                                <th>Remove</th>
+                                <th class = 'subtitle-white'>Item</th>
+                                <th class = 'subtitle-white'>Price</th>
+                                <th class = 'subtitle-white'>Quantity</th>
+                                <th class = 'subtitle-white'>Total</th>
+                                <th class = 'subtitle-white'>Remove</th>
                             </tr>
                         </thead>
                         <tbody>
