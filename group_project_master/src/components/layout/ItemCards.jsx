@@ -31,7 +31,19 @@ function formatPrice(price) {
     return`$${price.toLocaleString('en-us', { minimumFractionDigits: 2 })}`;
 }
 
-function ItemCards() {
+function ItemCards(props) {
+    const [quantities, setQuantities] = useState({});
+
+    const getQty = (id) => {
+        return quantities[id] || 1;
+    }
+
+    const changeQty = (itemId, delta) => {
+        setQuantities({
+            ...quantities,
+            [itemId]: Math.max(1, (quantities[itemId] || 1) + delta)
+        });
+    }
     return (
         <div className="item-cards">
             {item.map((item) => {
@@ -53,8 +65,15 @@ function ItemCards() {
                                 <p className="item-card_price">{formatPrice(item.price)}</p>
                             </div>
                             <h4 className="item-card_name">{item.name}</h4>
-                            <input type="text" className="item-card_counter" name="Qty input" />
-                            <button type="button" class="btn btn-primary btn-lg">Add To Cart</button>
+                            <div style={{display:'flex', alignItems:'center', gap:'10px'}}>
+                                <button className="btn btn-secondary" onClick={() => changeQty(item.id, -1)}>-</button>
+                                <span>{getQty(item.id)}</span>
+                                <button className="btn btn-secondary" onClick={() => changeQty(item.id, 1)}>+</button>
+                            </div>
+                            <button
+                            className="btn btn-primary btn-lg"
+                            onClick={() => props.addToCart(item, getQty(item.id))}
+                            >Add To Cart</button>
                         </div>
                     </div>
                 );
