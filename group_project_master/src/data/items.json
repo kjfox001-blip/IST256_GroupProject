@@ -32,7 +32,7 @@
     "id": 5,
     "name": "Shield",
     "price": 500,
-    "category": "Arms",
+    "category": "Shields",
     "image": "https://images.metmuseum.org/CRDImages/aa/original/LC-1984.26a-005.jpg"
   },
   {
@@ -158,14 +158,14 @@
     "id": 23,
     "name": "Pavise Shield",
     "price": 700,
-    "category": "Arms",
+    "category": "Shields",
     "image": "https://images.metmuseum.org/CRDImages/aa/original/DP111254.jpg"
   },
   {
     "id": 24,
     "name": "Buckler Shield",
     "price": 300,
-    "category": "Arms",
+    "category": "Shields",
     "image": "https://images.metmuseum.org/CRDImages/aa/original/LC-45_160_1-001.jpg"
   },
   {
@@ -207,7 +207,7 @@
     "id": 30,
     "name": "Tourney / Cavalry Shield",
     "price": 200,
-    "category": "Arms",
+    "category": "Shields",
     "image": "https://images.metmuseum.org/CRDImages/aa/original/DT240700.jpg"
   },
   {

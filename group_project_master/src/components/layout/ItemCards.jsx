@@ -4,7 +4,7 @@ import {useState} from 'react';
 
 const PLACEHOLDER = "https://img.freepik.com/free-vector/illustration-gallery-icon_53876-27002.jpg?semt=ais_hybrid&w=740&q=80";
 
-const item = Array.isArray(itemsData) ? itemsData : itemsData.items ?? [];
+const allItems = Array.isArray(itemsData) ? itemsData : itemsData.items ?? [];
 
 function isDirectImageUrl(url) {
     return typeof url === 'string' && /\.(jpeg|jpg|gif|png|bmp|webp|svg)$/i.test(url);
@@ -29,6 +29,9 @@ function ItemCards(props) {
             [itemId]: Math.max(1, (quantities[itemId] || 1) + delta)
         });
     }
+    const item = props.filterCategory 
+    ? allItems.filter(product => product.category === props.filterCategory)
+    : allItems;
     return (
         <div className="item-cards">
             {item.map((item) => {
