@@ -14,6 +14,7 @@ const EMPTY_FORM = {
     country: "",
 
     paymentMethod: "card",
+    cardName: "",
     cardNum: "",
     cardExpDt:"",
     cardCvv: "",
@@ -69,6 +70,7 @@ function Checkout(props){
         if (!formData.zipCode.trim())e.zipCode = "Zip Code is Required";
         if (!formData.country.trim())e.country = "Country is Required";
         if (formData.paymentMethod === "card"){
+            if (!formData.cardName.trim())e.cardName = "Name on Card is Required";
             if (formData.cardNum.length !== 16)e.cardNum = "Card Number is Invalid";
             if (!formData.cardExpDt.trim())e.cardExpDt = "Expiration Date is Required";
             if (formData.cardCvv.length < 3)e.cardCvv = "CVV is Invalid";
@@ -84,11 +86,11 @@ function Checkout(props){
             return;
         }
 
-        var Date = new Date();
-
+        const now = new Date();
+        
         const orderData = {
-            orderid: `random-${Date.now()}`,
-            orderPlaced: new Date().toISOString(),
+            orderid: `ORD-${now.getTime()}`,
+            orderPlaced: now.toISOString(),
             customer:{
                 name: formData.name,
                 email: formData.email,
@@ -136,60 +138,63 @@ function Checkout(props){
             <main style = {{ padding: '40px', fontFamily: 'Roboto, sans-serif'}}>
                 <h1 className="title">Checkout</h1>
                 <form onSubmit={handleSubmit} noValidate>
-                    <div class="form-row">
-                        <div class="form-group">
+                    <div className="form-row">
+                        <div className="form-group">
                             <label for="name">Name</label>
-                            <input type="string" class="form-control" id="name" name="name" value={formData.name} onChange={handleChange} />
+                            <input type="string" className="form-control" id="name" name="name" value={formData.name} onChange={handleChange} />
                             {errors.name && <small className="text-danger">{errors.name}</small>}
                         </div>
-                        <div class="form-group">
+                        <div className="form-group">
                             <label for="email">Email</label>
-                            <input type="email" class="form-control" id="email" name="email" value={formData.email} onChange={handleChange} />
+                            <input type="email" className="form-control" id="email" name="email" value={formData.email} onChange={handleChange} />
                             {errors.email && <small className="text-danger">{errors.email}</small>}
                         </div>
                     </div>
-                    <div class="form-group">
+                    <div className="form-group">
                         <label for="address">Address</label>
-                        <input type="text" class="form-control" id="address" name="address" value={formData.address} onChange={handleChange} />
+                        <input type="text" className="form-control" id="address" name="address" value={formData.address} onChange={handleChange} />
                         {errors.address && <small className="text-danger">{errors.address}</small>}
                     </div>
-                    <div class="form-row">
-                        <div class="form-group">
+                    <div className="form-row">
+                        <div className="form-group">
                             <label for="city">City</label>
-                            <input type="text" class="form-control" id="city" name="city" value={formData.city} onChange={handleChange} />
+                            <input type="text" className="form-control" id="city" name="city" value={formData.city} onChange={handleChange} />
                             {errors.city && <small className="text-danger">{errors.city}</small>}
                         </div>
-                        <div class="form-group">
+                        <div className="form-group">
                             <label for="state">State</label>
-                            <input type="text" class="form-control" id="state" name="state" value={formData.state} onChange={handleChange} />
+                            <input type="text" className="form-control" id="state" name="state" value={formData.state} onChange={handleChange} />
                             {errors.state && <small className="text-danger">{errors.state}</small>}
                         </div>
-                        <div class="form-group">
+                        <div className="form-group">
                             <label for="zipCode">Zip Code</label>
-                            <input type="number" class="form-control" id="zipCode" name="zipCode" value={formData.zipCode} onChange={handleChange} />
+                            <input type="number" className="form-control" id="zipCode" name="zipCode" value={formData.zipCode} onChange={handleChange} />
                             {errors.zipCode && <small className="text-danger">{errors.zipCode}</small>}
                         </div>
                     </div>
-                    <div class = "form-group">
-                        {formData.paymentMethod === "card" && (
-                            <>
-                                <div class = "form-group">
-                                    <label for="cardNumber">Card Number</label>
-                                    <input type="text" class="form-control" id="cardNumber" name="cardNumber" value={formData.cardNumber} onChange={handleChange} />
-                                    {errors.cardNumber && <small className="text-danger">{errors.cardNumber}</small>}
-                                </div>
-                                <div class = "form-group">
-                                    <label for="expiryDate">Expiry Date</label>
-                                    <input type="text" class="form-control" id="expiryDate" name="expiryDate" value={formData.expiryDate} onChange={handleChange} />
+                    <div className = "form-group">
+                        {formData.paymentMethod === "card" && (<>
+                            <div className = "form-group">
+                                <label for="cardName">Name on Card</label>
+                                <input type="text" className="form-control" id="cardName" name="cardName" value={formData.cardName} onChange={handleChange} />
+                                {errors.cardName && <small className="text-danger">{errors.cardName}</small>}
+                            </div>
+                            <div className = "form-group">
+                                <label for="cardNumber">Card Number</label>
+                                <input type="text" className="form-control" id="cardNumber" name="cardNumber" value={formData.cardNumber} onChange={handleChange} />
+                                {errors.cardNumber && <small className="text-danger">{errors.cardNumber}</small>}
+                            </div>
+                            <div className = "form-group">
+                                <label for="expiryDate">Expiry Date</label>
+                                <input type="text" className="form-control" id="expiryDate" name="expiryDate" value={formData.expiryDate} onChange={handleChange} />
                                 {errors.expiryDate && <small className="text-danger">{errors.expiryDate}</small>}
-                                </div>
-                                <div class = "form-group">
-                                    <label for="cvv">CVV</label>
-                                    <input type="text" class="form-control" id="cardCvv" name="cardCvv" value={formData.cardCvv} onChange={handleChange} />
-                                    {errors.cardCvv && <small className="text-danger">{errors.cardCvv}</small>}
-                                </div>
-                            </>
-                        )}
+                            </div>
+                            <div className = "form-group">
+                                <label for="cvv">CVV</label>
+                                <input type="text" className="form-control" id="cardCvv" name="cardCvv" value={formData.cardCvv} onChange={handleChange} />
+                                {errors.cardCvv && <small className="text-danger">{errors.cardCvv}</small>}
+                            </div>
+                        </>)}
                     </div>
                     <div className="order-section">
                         <h5 className="order-section_heading">Order Summary</h5>
@@ -199,7 +204,6 @@ function Checkout(props){
                         <button type = "submit" className = "btn btn-primary">Place Order</button>
                     </div>
                 </form>
-                <Cart />
             </main>
         </div>
     );
