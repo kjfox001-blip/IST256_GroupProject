@@ -6,6 +6,7 @@ import Cart from './pages/Cart.jsx';
 import Collection from './pages/Collection.jsx';
 import MyFooter from './components/layout/Footer.jsx';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Checkout from './pages/Checkout.jsx';
 
 
 function App() {
@@ -80,6 +81,7 @@ function App() {
                 category="Shields"
                 addToCart={addToCart}/>
             }/>
+            <Route path="/checkout" element={<Checkout cart={cart}/>} />
         </Routes>
         <MyFooter />
       </BrowserRouter>

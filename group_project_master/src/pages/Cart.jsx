@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import Checkout from "./Checkout.jsx";
 
 function Cart(props) {
     const subtotal = props.cart.reduce((total, cartItem) => {
@@ -54,7 +55,7 @@ function Cart(props) {
 
                     <div>
                         <Link to="/shop" className="btn btn-secondary me-2">Continue Shopping</Link>
-                        <button className="btn btn-success btn-lg">Proceed to Checkout</button>
+                        <Link to="/checkout" className="btn btn-success btn-lg">Proceed to Checkout</Link>
                     </div>
                 </div>
             )}
