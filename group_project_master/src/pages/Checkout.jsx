@@ -68,12 +68,11 @@ function Checkout(props){
         if (!formData.city.trim())e.city = "City is Required";
         if (!formData.state.trim())e.state = "State is Required";
         if (!formData.zipCode.trim())e.zipCode = "Zip Code is Required";
-        if (!formData.country.trim())e.country = "Country is Required";
         if (formData.paymentMethod === "card"){
             if (!formData.cardName.trim())e.cardName = "Name on Card is Required";
-            if (formData.cardNum.length !== 16)e.cardNum = "Card Number is Invalid";
-            if (!formData.cardExpDt.trim())e.cardExpDt = "Expiration Date is Required";
-            if (formData.cardCvv.length < 3)e.cardCvv = "CVV is Invalid";
+            if (formData.cardNum.replace (/\s/g, '').length < 16)e.cardNum = "Card Number is Invalid";
+            if (!formData.cardExpDt.trim())e.cardExpDt = "Card Expiry Date is Required";
+            if (formData.cardCvv.length !== 3)e.cardCvv = "Card cvv is Invalid";
         }
         setErrors(e);
         return e;
@@ -100,7 +99,6 @@ function Checkout(props){
                 city: formData.city,
                 state: formData.state,
                 zipCode: formData.zipCode,
-                country: formData.country,
             },
             paymentInfo:{
                 method: formData.paymentMethod,
@@ -139,59 +137,60 @@ function Checkout(props){
                 <h1 className="title">Checkout</h1>
                 <form onSubmit={handleSubmit} noValidate>
                     <div className="form-row">
-                        <div className="form-group">
-                            <label for="name">Name</label>
+                        <div className="form-group col-md-6">
+                            <label htmlFor="name">Name</label>
                             <input type="string" className="form-control" id="name" name="name" value={formData.name} onChange={handleChange} />
                             {errors.name && <small className="text-danger">{errors.name}</small>}
                         </div>
-                        <div className="form-group">
-                            <label for="email">Email</label>
+                        <div className="form-group col-md-6">
+                            <label htmlFor="email">Email</label>
                             <input type="email" className="form-control" id="email" name="email" value={formData.email} onChange={handleChange} />
                             {errors.email && <small className="text-danger">{errors.email}</small>}
                         </div>
                     </div>
                     <div className="form-group">
-                        <label for="address">Address</label>
+                        <label htmlFor="address">Address</label>
                         <input type="text" className="form-control" id="address" name="address" value={formData.address} onChange={handleChange} />
                         {errors.address && <small className="text-danger">{errors.address}</small>}
                     </div>
                     <div className="form-row">
-                        <div className="form-group">
-                            <label for="city">City</label>
+                        <div className="form-group col-md-6">
+                            <label htmlFor="city">City</label>
                             <input type="text" className="form-control" id="city" name="city" value={formData.city} onChange={handleChange} />
                             {errors.city && <small className="text-danger">{errors.city}</small>}
                         </div>
-                        <div className="form-group">
-                            <label for="state">State</label>
+                        <div className="form-group col-md-4">
+                            <label htmlFor="state">State</label>
                             <input type="text" className="form-control" id="state" name="state" value={formData.state} onChange={handleChange} />
                             {errors.state && <small className="text-danger">{errors.state}</small>}
                         </div>
-                        <div className="form-group">
-                            <label for="zipCode">Zip Code</label>
-                            <input type="number" className="form-control" id="zipCode" name="zipCode" value={formData.zipCode} onChange={handleChange} />
+                        <div className="form-group col-md-2">
+                            <label htmlFor="zipCode">Zip Code</label>
+                            <input inputMode = "numeric" type="text" className="form-control" id="zipCode" name="zipCode" value={formData.zipCode} onChange={handleChange} />
                             {errors.zipCode && <small className="text-danger">{errors.zipCode}</small>}
                         </div>
                     </div>
-                    <div className = "form-group">
+                    <h2>Payment Information</h2>
+                    <div className = "form-row">
                         {formData.paymentMethod === "card" && (<>
                             <div className = "form-group">
-                                <label for="cardName">Name on Card</label>
+                                <label htmlFor="cardName">Name of Cardholder</label>
                                 <input type="text" className="form-control" id="cardName" name="cardName" value={formData.cardName} onChange={handleChange} />
                                 {errors.cardName && <small className="text-danger">{errors.cardName}</small>}
                             </div>
                             <div className = "form-group">
-                                <label for="cardNumber">Card Number</label>
-                                <input type="text" className="form-control" id="cardNumber" name="cardNumber" value={formData.cardNumber} onChange={handleChange} />
+                                <label htmlFor="cardNum">Card Number</label>
+                                <input type="number" className="form-control" id="cardNum" name="cardNum" value={formData.cardNumber} onChange={handleChange} />
                                 {errors.cardNumber && <small className="text-danger">{errors.cardNumber}</small>}
                             </div>
                             <div className = "form-group">
-                                <label for="expiryDate">Expiry Date</label>
-                                <input type="text" className="form-control" id="expiryDate" name="expiryDate" value={formData.expiryDate} onChange={handleChange} />
-                                {errors.expiryDate && <small className="text-danger">{errors.expiryDate}</small>}
+                                <label htmlFor="cardExpDt">Expiry Date</label>
+                                <input type="text" className="form-control" id="cardExpDt" name="cardExpDt" value={formData.cardExpDt} onChange={handleChange} />
+                                {errors.cardExpDt && <small className="text-danger">{errors.cardExpDt}</small>}
                             </div>
                             <div className = "form-group">
-                                <label for="cvv">CVV</label>
-                                <input type="text" className="form-control" id="cardCvv" name="cardCvv" value={formData.cardCvv} onChange={handleChange} />
+                                <label htmlFor="cvv">CVV</label>
+                                <input inputMode="numeric" type="text" className="form-control" id="cardCvv" name="cardCvv" value={formData.cardCvv} onChange={handleChange} />
                                 {errors.cardCvv && <small className="text-danger">{errors.cardCvv}</small>}
                             </div>
                         </>)}
@@ -201,7 +200,7 @@ function Checkout(props){
                         <h5>Total : ${subtotal.toLocaleString('en-us', { minimumFractionDigits: 2 })}</h5>
                     </div>
                     <div className="checkout-actions">
-                        <button type = "submit" className = "btn btn-primary">Place Order</button>
+                        <button type = "submit" className = "btn btn-success">Place Order</button>
                     </div>
                 </form>
             </main>
