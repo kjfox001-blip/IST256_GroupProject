@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import "../assets/titles.css";
 import "../assets/checkout.css";
+import'bootstrap/dist/css/bootstrap.min.css';
 
 const EMPTY_FORM = {
     name: "",
