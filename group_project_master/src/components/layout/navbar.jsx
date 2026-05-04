@@ -47,10 +47,6 @@ export default function MyNav() {
         </Nav>
 
         <Nav className="right-side-nav">
-          <LinkContainer to="/search">
-            <Nav.Link>Search</Nav.Link>
-          </LinkContainer>
-
           <LinkContainer to="/cart">
             <Nav.Link>Cart</Nav.Link>
           </LinkContainer>

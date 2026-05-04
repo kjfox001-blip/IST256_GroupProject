@@ -251,6 +251,20 @@
     "price": 400,
     "category": "Arms",
     "image": "https://www.artic.edu/iiif/2/c09b3287-9487-7458-ba62-41c7b791ea4f/full/843,/0/default.jpg"
+  },
+  {
+    "id": 37,
+    "name": "Hungarian style Shield",
+    "price": 300,
+    "category": "Shields",
+    "image": "https://images.metmuseum.org/CRDImages/aa/original/DT11900.jpg"
+  },
+  {
+    "id": 38,
+    "name": "Steel Flat Shield",
+    "price": 550,
+    "category": "Shields",
+    "image": "https://images.metmuseum.org/CRDImages/aa/original/LC-14_25_732-001-2-Edit.jpg"
   }
 ]
 }
