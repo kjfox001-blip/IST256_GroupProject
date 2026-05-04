@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import MyNav from './components/layout/navbar.jsx';
 import Home from './pages/Home.jsx';
 import Shop from './pages/Shop.jsx';
@@ -39,6 +39,7 @@ function App() {
       removeFromCart(idToUpdate);
       return;
     }
+
     const updatedCart = cart.map(cartItem => {
       if (cartItem.id === idToUpdate) {
         return { ...cartItem, quantity: newQuantity };
@@ -47,6 +48,23 @@ function App() {
     });
     setCart(updatedCart);
    }
+
+   const clearCart = () => {
+      setCart([]);
+    }
+
+    useEffect(() => {
+      if (cart.length > 0){
+      localStorage.setItem('shoppingCart', JSON.stringify(cart))
+      }
+    }, [cart]);
+
+    useEffect(() => {
+      const savedCart = localStorage.getItem('shoppingCart');
+      if(savedCart) {
+        setCart(JSON.parse(savedCart));
+      }
+    }, []);
 
   return (
     <div className="app-container">
@@ -81,7 +99,7 @@ function App() {
                 category="Shields"
                 addToCart={addToCart}/>
             }/>
-            <Route path="/checkout" element={<Checkout cart={cart}/>} />
+            <Route path="/checkout" element={<Checkout cart={cart} clearCart = {clearCart} />} />
         </Routes>
         <MyFooter />
       </BrowserRouter>
