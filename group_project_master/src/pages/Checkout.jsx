@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useState, useRef } from "react";
 import "../assets/titles.css";
 import "../assets/checkout.css";
 import'bootstrap/dist/css/bootstrap.min.css';
@@ -39,6 +39,7 @@ function Checkout(props){
     const [formData, setFormData] = useState(EMPTY_FORM);
     const [errors, setErrors] = useState({});
     const [submitted, setSubmitted] = useState(false);
+    const orderRef = useRef(null);
 
     const subtotal = props.cart.reduce((total, cartItem) => {
         return total + cartItem.price * cartItem.quantity;
@@ -121,6 +122,13 @@ function Checkout(props){
             })),
             total: total,
         };
+        orderRef.current = {
+            ...orderData,
+            subtotal: subtotal,
+            tax: tax,
+            total: total,
+        };
+
         console.log("Order Placed:", orderData);
         setSubmitted(true);
         props.clearCart();
@@ -128,14 +136,58 @@ function Checkout(props){
     if (submitted){
         return(
             <div className="checkout-success">
-                <div className="checkout-success_message"></div>
-                <h2>Order Placed!</h2>
-                <p>Thank you {formData.name}, your order has been placed successfully and logged.</p>
-                <Link to = "/shop" className="btn btn-primary">Continue Shopping</Link>
-                <Link to = "/home" className="btn btn-secondary">Home</Link>
+                <main style={{ padding: '40px', fontFamily: 'Roboto, sans-serif'}}>
+                    <div style={{maxWidth: '700px', margin: '0 auto', border: '1px solid #ddd', padding: '30px', borderRadius: '8px'}}>
+                        
+                        <h1 className="title">Order Confirmed</h1>
+                        <p>Cheers! <strong>{formData.name}</strong> - your order has been placed</p>
+                        <hr />
+                        <h4>Order Details</h4>
+                        <p><strong>Order ID:</strong>{orderRef.current.orderid}</p>
+                        <p><strong>Email:</strong>{formData.email}</p>
+                        <hr />
+                        <h4>Shipping To</h4>
+                        <p>{formData.address}</p>
+                        <p>{formData.city}, {formData.state}, {formData.zipCode}</p>
+                        <hr />
+                        <h4>Items Ordered</h4>
+                        <table className="table table-bordered">
+                            <thead className="table-dark">
+                                <tr>
+                                    <th>Item</th>
+                                    <th>Price</th>
+                                    <th>Quantity</th>
+                                    <th>Item Total</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {orderRef.current.items.map(item => (
+                                    <tr key={item.id}>
+                                        <td>{item.name}</td>
+                                        <td>${item.price.toLocaleString('en-us', { minimumFractionDigits: 2 })}</td>
+                                        <td>{item.quantity}</td>
+                                        <td>${(item.price * item.quantity).toLocaleString('en-us', { minimumFractionDigits: 2 })}</td>
+                                    </tr>
+                                ))}
+                            </tbody>
+                        </table>
+                            
+                            <div style={{ textAlign: 'right'}}>
+                                <p><strong>Subtotal:</strong> ${orderRef.current.subtotal.toLocaleString('en-us', { minimumFractionDigits: 2 })}</p>
+                                <p><strong>Tax (6%):</strong> ${orderRef.current.tax.toLocaleString('en-us', { minimumFractionDigits: 2 })}</p>
+                                <h4><strong>Total: ${orderRef.current.total.toLocaleString('en-us', { minimumFractionDigits: 2 })}</strong></h4>
+                            </div>
+                            <hr />
+
+                            <div style={{textAlign: 'center'}}>
+                                <Link to = "/shop" className="btn btn-primary">Continue Shopping</Link>
+                                <Link to = "/home" className="btn btn-secondary">Home</Link>
+                            </div>
+                    </div>
+                </main>
             </div>
-        );
-    }
+    );
+}
     return(
         <div className = "app-container">
             <main style = {{ padding: '40px', fontFamily: 'Roboto, sans-serif'}}>

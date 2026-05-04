@@ -71,7 +71,7 @@ function App() {
       <BrowserRouter>
         <MyNav />
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Home addToCart={addToCart} />} />
           <Route path="/shop" element={<Shop addToCart={addToCart} />} />
           <Route path="/cart" element= { 
             <Cart
