@@ -44,6 +44,10 @@ function Checkout(props){
         return total + cartItem.price * cartItem.quantity;
     }, 0);
 
+    const taxRate = 0.06;
+    const tax = subtotal * taxRate;
+    const total = subtotal + tax;
+
     function handleChange(e){
         const { name, value } = e.target;
         if(name === "cardNum"){
@@ -115,7 +119,7 @@ function Checkout(props){
                 price: item.price,
                 quantity: item.quantity,
             })),
-            total: subtotal,
+            total: total,
         };
         console.log("Order Placed:", orderData);
         setSubmitted(true);
@@ -198,7 +202,9 @@ function Checkout(props){
                     </div>
                     <div className="order-section">
                         <h5 className="order-section_heading">Order Summary</h5>
-                        <h5>Total : ${subtotal.toLocaleString('en-us', { minimumFractionDigits: 2 })}</h5>
+                        <h5>Subtotal : ${subtotal.toLocaleString('en-us', { minimumFractionDigits: 2 })}</h5>
+                        <h5>Tax (6%): ${tax.toLocaleString('en-us', { minimumFractionDigits: 2 })}</h5>
+                        <h5><strong>Total: ${total.toLocaleString('en-us', { minimumFractionDigits: 2 })}</strong></h5>
                     </div>
                     <div className="checkout-actions">
                         <button type = "submit" className = "btn btn-success">Place Order</button>
