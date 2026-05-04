@@ -198,7 +198,7 @@ function Checkout(props){
                     </div>
                     <div className="order-section">
                         <h5 className="order-section_heading">Order Summary</h5>
-                        <h5>Total : ${subtotal.toLocaleString('en-us', { minimumFractionDigits: 2 })}</h5>
+                    <h5 className="total-checkout">Total : ${subtotal.toLocaleString('en-us', { minimumFractionDigits: 2 })}</h5>
                     </div>
                     <div className="checkout-actions">
                         <button type = "submit" className = "btn btn-success">Place Order</button>

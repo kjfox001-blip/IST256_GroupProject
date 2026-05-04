@@ -1,9 +1,8 @@
 .item-cards{
     display:grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: 20px; 
     padding: 40px;
-    font-family: "roboto", sans-serif;    
 }
 .item-card{
     display: flex;
@@ -25,15 +24,15 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 .item-card_img{
-    width: 200px;
-    height: 160px;
+    width: 100%;
+    height: 200px;
     object-fit: cover;
     object-position: center;
     display: block;
 }
 .item-card-img_container{
-    width: 200px;
-    height: 160px;
+    width: 100%;
+    height: 200px;
     overflow: hidden;
     flex-shrink: 0;
     background-color: #f3f4f6;
@@ -69,11 +68,19 @@
     margin: 0;
     font-family: "roboto", sans-serif;    
 }
-.item-card_counter{
-    flex: 1;
+.item-card_counter-btn{
+    display: flex;
+    justify-content: center;
+    align-Items: center;
+    gap: 0;
+}
+.item-card_counter-qty{
+    display: inline-block;
+    min-width: 48px;
     text-align: center;
-    font-size: 14px;
+    font-size: 20px;
+    text-align: center;
+    font-family: "roboto", sans-serif;
     font-weight: 500;
     color: black;
-    font-family: "roboto", sans-serif;
 }

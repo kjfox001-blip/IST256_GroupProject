@@ -128,7 +128,7 @@
   },
   {
     "id": 19,
-    "name": "Hourglass Gauntlets",
+    "name": "Standard Gauntlets",
     "price": 600,
     "category": "Armour",
     "image": "https://images.metmuseum.org/CRDImages/aa/original/DP-12881-032.jpg"
@@ -223,6 +223,34 @@
     "price": 150,
     "category": "Mounts",
     "image": "https://images.metmuseum.org/CRDImages/aa/original/DT760.jpg"
+  },
+  {
+    "id": 33,
+    "name": "Half-Helm",
+    "price": 500,
+    "category": "Armour",
+    "image": "https://images.metmuseum.org/CRDImages/aa/original/04.3.200_014AA2015.jpg"
+  },
+  {
+    "id": 34,
+    "name": "Cinquedea (Decorative)",
+    "price": 1500,
+    "category": "Arms",
+    "image": "https://images.metmuseum.org/CRDImages/aa/original/14.25.1264_002dec2014.jpg"
+  },
+  {
+    "id": 35,
+    "name": "Fingered Gauntlet",
+    "price": 1000,
+    "category": "Armour",
+    "image": "https://images.metmuseum.org/CRDImages/aa/original/DP104361.jpg"
+  },
+  {
+    "id": 36,
+    "name": "Rondel Dagger",
+    "price": 400,
+    "category": "Arms",
+    "image": "https://www.artic.edu/iiif/2/c09b3287-9487-7458-ba62-41c7b791ea4f/full/843,/0/default.jpg"
   }
 ]
 }

@@ -54,9 +54,11 @@ function ItemCards(props) {
                             </div>
                             <h4 className="item-card_name">{item.name}</h4>
                             <div style={{display:'flex', alignItems:'center', gap:'10px'}}>
-                                <button className="btn btn-secondary" onClick={() => changeQty(item.id, -1)}>-</button>
-                                <span>{getQty(item.id)}</span>
-                                <button className="btn btn-secondary" onClick={() => changeQty(item.id, 1)}>+</button>
+                                <div className = "item-card_counter-btn">
+                                    <button className="btn btn-secondary" onClick={() => changeQty(item.id, -1)}>-</button>
+                                    <span className="item-card_counter-qty">{getQty(item.id)}</span>
+                                    <button className="btn btn-secondary" onClick={() => changeQty(item.id, 1)}>+</button>
+                                </div>
                             </div>
                             <button
                             className="btn btn-primary btn-lg"

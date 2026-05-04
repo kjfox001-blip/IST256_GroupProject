@@ -17,8 +17,14 @@
 }
 .form-control{
     border-radius: 6px;
-    border: 1px solid #000000;
+    border: 5px solid #000000;
     padding: 8px 10px;
     font-size: 10px;
     width: 100%;
+}
+.checkout-success{
+    display: block;
+    text-align: center;
+    padding: 20px;
+    font-family: "Roboto", sans-serif;
 }
