@@ -32,7 +32,7 @@
     "id": 5,
     "name": "Shield",
     "price": 500,
-    "category": "Shields",
+    "category": "Extras",
     "image": "https://images.metmuseum.org/CRDImages/aa/original/LC-1984.26a-005.jpg"
   },
   {
@@ -53,14 +53,14 @@
     "id": 8,
     "name": "Cast Arrows and Bolts",
     "price": 0.1,
-    "category": "Munitions",
+    "category": "Extras",
     "image": "https://www.medievalcollectibles.com/wp-content/uploads/2019/03/AH-3522-25_2.jpg"
   },
   {
     "id": 9,
     "name": "Hammer Finished Arrows and Bolts",
     "price": 0.5,
-    "category": "Munitions",
+    "category": "Extras",
     "image": "https://exarc.net/sites/default/files/main_218.jpg"
   },
   {
@@ -158,14 +158,14 @@
     "id": 23,
     "name": "Pavise Shield",
     "price": 700,
-    "category": "Shields",
+    "category": "Extras",
     "image": "https://images.metmuseum.org/CRDImages/aa/original/DP111254.jpg"
   },
   {
     "id": 24,
     "name": "Buckler Shield",
     "price": 300,
-    "category": "Shields",
+    "category": "Extras",
     "image": "https://images.metmuseum.org/CRDImages/aa/original/LC-45_160_1-001.jpg"
   },
   {
@@ -207,21 +207,21 @@
     "id": 30,
     "name": "Tourney / Cavalry Shield",
     "price": 200,
-    "category": "Shields",
+    "category": "Extras",
     "image": "https://images.metmuseum.org/CRDImages/aa/original/DT240700.jpg"
   },
   {
     "id": 31,
     "name": "Stirrups",
     "price": 80,
-    "category": "Mounts",
+    "category": "Extras",
     "image":  "https://images.metmuseum.org/CRDImages/aa/original/LC-14_25_1757a_b-004.jpg"
   },
   {
     "id": 32,
     "name": "Spurs",
     "price": 150,
-    "category": "Mounts",
+    "category": "Extras",
     "image": "https://images.metmuseum.org/CRDImages/aa/original/DT760.jpg"
   },
   {
@@ -256,14 +256,14 @@
     "id": 37,
     "name": "Hungarian style Shield",
     "price": 300,
-    "category": "Shields",
+    "category": "Extras",
     "image": "https://images.metmuseum.org/CRDImages/aa/original/DT11900.jpg"
   },
   {
     "id": 38,
     "name": "Steel Flat Shield",
     "price": 550,
-    "category": "Shields",
+    "category": "Extras",
     "image": "https://images.metmuseum.org/CRDImages/aa/original/LC-14_25_732-001-2-Edit.jpg"
   }
 ]

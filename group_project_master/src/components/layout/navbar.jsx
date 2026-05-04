@@ -36,8 +36,8 @@ export default function MyNav() {
               <NavDropdown.Item>Armor</NavDropdown.Item>
             </LinkContainer>
 
-            <LinkContainer to="/shields">
-              <NavDropdown.Item>Shields</NavDropdown.Item>
+            <LinkContainer to="/extras">
+              <NavDropdown.Item>Extras</NavDropdown.Item>
             </LinkContainer>
 
             <LinkContainer to="/arms">

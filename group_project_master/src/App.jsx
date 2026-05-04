@@ -92,11 +92,11 @@ function App() {
                 category="Arms"
                 addToCart={addToCart}/>
             }/>
-            <Route path="/shields" element={
+            <Route path="/extras" element={
               <Collection
-                title="Shield"
-                description="The shields that guarded the realms of men."
-                category="Shields"
+                title="Extras"
+                description="Shields, Munitions and Riding Gear For Every Warrior"
+                category="Extras"
                 addToCart={addToCart}/>
             }/>
             <Route path="/checkout" element={<Checkout cart={cart} clearCart = {clearCart} />} />
