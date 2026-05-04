@@ -144,7 +144,7 @@ function Checkout(props){
                     <div className="form-row">
                         <div className="form-group col-md-6">
                             <label htmlFor="name">Name</label>
-                            <input type="string" className="form-control" id="name" name="name" value={formData.name} onChange={handleChange} />
+                            <input type="text" className="form-control" id="name" name="name" value={formData.name} onChange={handleChange} />
                             {errors.name && <small className="text-danger">{errors.name}</small>}
                         </div>
                         <div className="form-group col-md-6">
@@ -185,8 +185,8 @@ function Checkout(props){
                             </div>
                             <div className = "form-group">
                                 <label htmlFor="cardNum">Card Number</label>
-                                <input type="number" className="form-control" id="cardNum" name="cardNum" value={formData.cardNumber} onChange={handleChange} />
-                                {errors.cardNumber && <small className="text-danger">{errors.cardNumber}</small>}
+                                <input type="text" className="form-control" id="cardNum" name="cardNum" value={formData.cardNum} onChange={handleChange} />
+                                {errors.cardNum && <small className="text-danger">{errors.cardNum}</small>}
                             </div>
                             <div className = "form-group">
                                 <label htmlFor="cardExpDt">Expiry Date</label>
